@@ -9,18 +9,18 @@ function getApi() {
         .then(function(data) {
             console.log(data.articles);
             for (let index = 0; index < data.articles.length; index++){
-                var newsCol = '';
+                var newsCol = '<a href='+data.articles[index].url+' target="_blank">';
                 if(data.articles[index].urlToImage != null){
-                    newsCol = '<section style="background-image: url('+data.articles[index].urlToImage+');">';
+                    newsCol += '<section style="background-image: url('+data.articles[index].urlToImage+');">';
                 }else{
-                    newsCol = '<section>';
+                    newsCol += '<section>';
                 }
 
                 newsCol += `                    
                     <div class="news-content">
                         <h3>`+data.articles[index].title+`</h3>
                     <div>
-                    </section>
+                    </section></a>
                 `;
                 
                 $("#news-articles-section").append(newsCol);
@@ -42,7 +42,7 @@ function buildSlider(){
         arrows: false,
         dots: true,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 5000,
         responsive: [
             {
               breakpoint: 767,
@@ -53,7 +53,7 @@ function buildSlider(){
                 arrows: false,
                 dots: true,
                 autoplay: true,
-                autoplaySpeed: 2000,
+                autoplaySpeed: 5000,
               }
             }
         ]
