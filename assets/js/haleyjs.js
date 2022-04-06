@@ -5,7 +5,6 @@ function getStats () {
     fetch (apiUrl).then(function(response) {
         if (response.ok) {
             response.json().then(function(data){
-                console.log(data);
 
                 for (let i = 82; i < data.data.length; i++) {
                     var getDate = data.data[i].date;
@@ -14,7 +13,6 @@ function getStats () {
                     var homeTeamScore = data.data[i].home_team_score;
                     var getVisitorTeam = data.data[i].visitor_team.full_name;
                     var visitorTeamScore = data.data[i].visitor_team_score
-                    console.log(getDate, getHomeTeam, getVisitorTeam, homeTeamScore, visitorTeamScore)
                 
                 var pastGamesEl = document.createElement("a");
                 pastGames.appendChild(pastGamesEl);
