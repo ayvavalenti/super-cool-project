@@ -1,3 +1,5 @@
+var pastGames = document.querySelector("#past-games");
+
 function getApi() {
     // TODO: Insert the API url to get a list of your repos
     var requestUrl = 'https://newsapi.org/v2/top-headlines?q=raptors&country=ca&category=sports&apiKey=8d807af9c2974fe880ecce7b3be08106';

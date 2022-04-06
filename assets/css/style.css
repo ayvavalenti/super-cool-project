@@ -5,9 +5,8 @@ h3 {
 }
 
 .bottom {
-    background-color: black;
-    color: #CE1141;
-    padding-top: 20px;
+    margin-top: 0px;
+    border-top: 1px solid white;
 }
 
 a, p{
@@ -21,12 +20,31 @@ a, p{
 .titles{
     font-size: 20px;
     font-weight: bold;
+    background-color: black;
+    color: #CE1141;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #CE1141;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
 
 a:hover{
     color: #A1A1A4;
+}
+
+#past-games {
+    background-color: black;
+    color: #B4975A;
+    text-align: center;
+    line-height: 1.5em; 
+    padding-top: 8px;
 }
 
 html{
