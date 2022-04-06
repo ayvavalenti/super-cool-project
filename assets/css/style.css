@@ -1,6 +1,5 @@
 h3 {
     text-align: center;
-    background-color: black;
     color: #CE1141;
     font-size: 60px;
 }
@@ -28,4 +27,68 @@ a, p{
 
 a:hover{
     color: #A1A1A4;
+}
+
+html{
+    background-color: #000;
+}
+
+#news-articles-section section{
+    height: 800px;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    padding: 2em;
+    background-image: url(../img/default-news.jpg);
+    box-shadow: inset 0 0 0 2000px rgb(0 0 0 / 40%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#news-articles-section .news-content{
+    text-align: center;
+}
+
+
+#news-articles-section h3{
+    color: #fff;
+
+    font-size: 50px;
+    font-weight: 600;
+    max-width: 1000px;
+}
+
+
+@media only screen and (max-width: 767px) {
+    #news-articles-section section{
+        height: 300px;
+        box-shadow: inset 0 0 0 2000px rgb(0 0 0 / 40%);
+    }
+    #news-articles-section .news-content{
+        display: block;
+    }
+    #news-articles-section h3{        
+        font-size: 20px;
+    }
+}
+
+.slick-dots li.slick-active button:before {
+    color: transparent;
+    background-color: #CE1141;
+}
+
+.slick-dots li button:before {
+    border: 3px solid #CE1141;
+    border-radius: 30px;
+    color: transparent;
+}
+
+.slick-dots{
+    bottom: -40px;
+}
+
+iframe {
+    width: 100%;
 }
