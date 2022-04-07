@@ -1,3 +1,31 @@
+.header {
+    background-color: #A1A1A4;
+    color: #ce1141;
+}
+
+.header img {
+    float: left;
+    width: 50px;
+    height: 50px;
+    background: none;
+}
+
+.header h1 {
+    font-size: 48px;
+    background-color: #A1A1A4;
+}
+
+.header div {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    margin-right: 25px;
+    float: right;
+    font-size: 20px;
+    padding-right: 25px;
+    background-color: #A1A1A4;
+}
+
 h3 {
     text-align: center;
     color: #CE1141;
