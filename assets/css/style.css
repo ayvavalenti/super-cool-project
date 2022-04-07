@@ -142,3 +142,8 @@ html{
 iframe {
     width: 100%;
 }
+
+#team-roster{
+    margin: 4em;
+    justify-content: center;
+}
