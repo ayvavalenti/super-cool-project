@@ -148,10 +148,11 @@ tr {
     margin-bottom: 5px;
     margin-top: 5px;
     display: flex;
-    margin-left: 800px;
+    /* margin-left: 800px; */
     margin-top: 50px;
     margin-bottom: 50px;
     table-layout: calc();
+    justify-content: center;
 }
 
 #title {
