@@ -143,7 +143,33 @@ iframe {
     width: 100%;
 }
 
-#team-roster{
-    margin: 4em;
-    justify-content: center;
+tr {
+    color: #B4975A;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    display: flex;
+    margin-left: 800px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    table-layout: calc();
+}
+
+#title {
+    color: #CE1141;
+    font-size: xx-large;
+    left: 50px;
+    width: 100%;
+}
+
+table{
+    table-layout: fixed;
+    width: 100%;
+}
+
+td {
+    width: 8%;
+}
+
+th {
+    width: 8%;
 }
