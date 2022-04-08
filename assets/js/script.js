@@ -2,25 +2,31 @@ var pastGames = document.querySelector("#past-games");
 
 function getApi() {
     // TODO: Insert the API url to get a list of your repos
-    var requestUrl = 'https://newsapi.org/v2/top-headlines?q=raptors&country=ca&category=sports&apiKey=8d807af9c2974fe880ecce7b3be08106';
-
-    fetch(requestUrl)
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Host': 'contextualwebsearch-websearch-v1.p.rapidapi.com',
+            'X-RapidAPI-Key': 'b232601537msh64da50b343b4de1p1a5f50jsn73ef2dd5d8b5'
+        }
+    };
+    
+    fetch('https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/NewsSearchAPI?q=raptors&pageNumber=1&pageSize=10&autoCorrect=true&fromPublishedDate=null&toPublishedDate=null', options)
         .then(function(response) {
             return response.json();
         })
         .then(function(data) {
-            console.log(data.articles);
-            for (let index = 0; index < data.articles.length; index++){
-                var newsCol = '<a href='+data.articles[index].url+' target="_blank">';
-                if(data.articles[index].urlToImage != null){
-                    newsCol += '<section style="background-image: url('+data.articles[index].urlToImage+');">';
+            console.log(data);
+            for (let index = 0; index < data.value.length; index++){
+                var newsCol = '<a href='+data.value[index].url+' target="_blank">';
+                if(data.value[index].image.url != null && data.value[index].image.url.length > 0){
+                    newsCol += '<section style="background-image: url('+data.value[index].image.url+');">';
                 }else{
                     newsCol += '<section>';
                 }
 
                 newsCol += `                    
                     <div class="news-content">
-                        <h3>`+data.articles[index].title+`</h3>
+                        <h3>`+data.value[index].title+`</h3>
                     <div>
                     </section></a>
                 `;
