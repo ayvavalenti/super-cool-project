@@ -10,12 +10,12 @@ function getApi() {
         }
     };
     
-    fetch('https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/NewsSearchAPI?q=raptors&pageNumber=1&pageSize=10&autoCorrect=true&fromPublishedDate=null&toPublishedDate=null', options)
+    fetch('https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/NewsSearchAPI?q=raptors&pageNumber=1&pageSize=5&autoCorrect=true&fromPublishedDate=null&toPublishedDate=null', options)
         .then(function(response) {
             return response.json();
         })
         .then(function(data) {
-            console.log(data);
+            // console.log(data);
             for (let index = 0; index < data.value.length; index++){
                 var newsCol = '<a href='+data.value[index].url+' target="_blank">';
                 if(data.value[index].image.url != null && data.value[index].image.url.length > 0){
